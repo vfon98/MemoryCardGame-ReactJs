@@ -23,13 +23,15 @@ class GameBoard extends React.Component {
       randomPairs: this.createRandomPairsFromChosenLogos()
     });
   }
-  // Check game over
-  UNSAFE_componentWillUpdate() {
+
+  componentDidUpdate() {
     const { remain, isOver } = this.state;
+    // Check game over
     if (!isOver && remain === 0) {
       this.setState({
         isOver: true
       });
+      this.props.onGameOver(true);
       console.log("GAME OVER !");
     }
   }
@@ -109,6 +111,9 @@ class GameBoard extends React.Component {
     this.setState({
       randomPairs,
       click: click + 1
+    }, () => {
+      if (this.state.click === 2)
+        this.props.startTimer();
     });
     let gameStatus = {
       click: click,
