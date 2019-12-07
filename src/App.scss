@@ -4,8 +4,19 @@
   box-sizing: border-box;
 }
 
-.container, #root {
-  background-color: #E4FBDD;
+body {
+  // background-color: #e4fbdd;
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #e2e2e2,
+    #c9d6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #e2e2e2,
+    #c9d6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 html {
   height: 100%;
@@ -26,16 +37,16 @@ html {
 .board-cell {
   margin: 0.1rem;
   border: 1px solid #00f;
-  background-color: #fff;
+  background-color: #e1ebee;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3%;
-  
+
   &:hover {
-    background-color: lightgrey;
+    background-color: #c7d1d8;
   }
-  
+
   img {
     max-width: 80%;
     max-height: 80%;
@@ -50,32 +61,35 @@ html {
 .game-menu {
   width: 14rem;
   height: 30rem;
-  border: 1px solid red;
+  border: 1px solid #c90a0a;
+  background-color: #f0b3f0;
   display: flex;
   flex-direction: column;
-  padding: 0.1rem;
+  padding: 0.2rem;
 
   &--top {
     flex-grow: 1;
     border: 1px solid #000;
+    background-color: khaki;
     display: flex;
     flex-basis: 3.5rem;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: .2rem;
-
+    margin-bottom: 0.2rem;
+    
     .clock {
       font-size: 3rem;
       font-weight: bold;
     }
   }
-
+  
   &--bottom {
+    background-color: khaki;
     flex-grow: 5;
     display: flex;
     border: 1px solid #000;
     flex-direction: column;
-
+    
     .info {
       margin-left: 1rem;
       &--table {
@@ -84,12 +98,12 @@ html {
           font-size: 1.2rem;
           text-align: right;
         }
-        
+
         td {
           font-weight: bold;
           color: #f00;
           font-size: 1.7rem;
-          padding-left: .6rem;
+          padding-left: 0.6rem;
         }
       }
     }
@@ -98,17 +112,36 @@ html {
 
 .game-over {
   border: 2px solid rgb(48, 47, 47);
-  padding: 1rem;
   position: fixed;
+  padding: 0.4rem 1rem 1rem;
   transform: translate(-50%, -50%);
-  background-color: rgb(241, 225, 98);
+  background-color: #fbab7e;
+  background-image: linear-gradient(270deg, #fbab7e 65%, #f7ce68 100%);
+
   border-radius: 1rem;
   top: 50%;
   left: 50%;
   font-weight: bold;
-  
+  font-size: 1.2rem;
+
+  // animation: 1s ease-out 0s 1 animation-on-show;
+  animation: animation-on-show 0.8s ease-out;
   .header {
+    text-align: center;
     color: rgb(240, 45, 45);
     font-size: 2rem;
+  }
+
+  .btn {
+    margin-top: .5rem;
+  }
+}
+
+@keyframes animation-on-show {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 50%;
   }
 }

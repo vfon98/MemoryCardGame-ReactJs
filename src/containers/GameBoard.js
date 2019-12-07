@@ -108,13 +108,15 @@ class GameBoard extends React.Component {
       });
     }
     // Update after click
-    this.setState({
-      randomPairs,
-      click: click + 1
-    }, () => {
-      if (this.state.click === 2)
-        this.props.startTimer();
-    });
+    this.setState(
+      {
+        randomPairs,
+        click: click + 1
+      },
+      () => {
+        if (this.state.click === 2) this.props.startTimer();
+      }
+    );
     let gameStatus = {
       click: click,
       remain: remain

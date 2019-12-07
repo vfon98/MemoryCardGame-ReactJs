@@ -13,7 +13,7 @@ class App extends React.Component {
     remain: 24,
     isOver: false,
     timer: null,
-    seconds: 0
+    score: 0
   };
 
   passGameStatusToMenu = gameStatus => {
@@ -46,10 +46,9 @@ class App extends React.Component {
 
   padTime = time => {
     let timeString = time + "";
-    if (timeString.length < 2){
+    if (timeString.length < 2) {
       return "0" + timeString;
-    }
-    else return timeString;
+    } else return timeString;
   };
 
   startTimer = () => {
@@ -64,13 +63,25 @@ class App extends React.Component {
     });
   };
 
+  handleRestartGame = () => {
+    console.log("Game restarted");
+    window.location.reload();
+    // this.setState({
+    //   isOver: false,
+    //   click: 0,
+    //   time: 0,
+    //   willRestart: true
+    // });
+  };
+
   render() {
-    let { boardSize, click, remain } = this.state;
+    let { boardSize, click, remain, time } = this.state;
     let formatedTime = this.formatTime();
+    let score = parseInt((click * 1000) / time) || 0;
     return (
-      <div className="container border">
+      <div className="container">
         <GameBanner />
-        <div className="game row">
+        <div className="game">
           <GameBoard
             boardSize={boardSize}
             gameStatus={this.passGameStatusToMenu}
@@ -82,10 +93,17 @@ class App extends React.Component {
             click={click}
             remain={remain}
             time={formatedTime}
-            seconds={this.state.time}
+            score={score}
           />
 
-          {this.state.isOver ? <GameOver {...this.state} /> : null}
+          {this.state.isOver ? (
+            <GameOver
+              time={time}
+              click={click}
+              score={score}
+              handleRestartGame={this.handleRestartGame}
+            />
+          ) : null}
         </div>
       </div>
     );
