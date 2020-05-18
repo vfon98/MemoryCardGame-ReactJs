@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MemoryCardGame-ReactJs/static/css/main.951b7187.chunk.css",
-    "main.js": "/MemoryCardGame-ReactJs/static/js/main.7362e979.chunk.js",
-    "main.js.map": "/MemoryCardGame-ReactJs/static/js/main.7362e979.chunk.js.map",
+    "main.js": "/MemoryCardGame-ReactJs/static/js/main.fa1de1a3.chunk.js",
+    "main.js.map": "/MemoryCardGame-ReactJs/static/js/main.fa1de1a3.chunk.js.map",
     "runtime-main.js": "/MemoryCardGame-ReactJs/static/js/runtime-main.f49139e9.js",
     "runtime-main.js.map": "/MemoryCardGame-ReactJs/static/js/runtime-main.f49139e9.js.map",
     "static/css/2.17e5ed98.chunk.css": "/MemoryCardGame-ReactJs/static/css/2.17e5ed98.chunk.css",
     "static/js/2.be2c1681.chunk.js": "/MemoryCardGame-ReactJs/static/js/2.be2c1681.chunk.js",
     "static/js/2.be2c1681.chunk.js.map": "/MemoryCardGame-ReactJs/static/js/2.be2c1681.chunk.js.map",
     "index.html": "/MemoryCardGame-ReactJs/index.html",
-    "precache-manifest.d4b15a17cd13039482fd907e14423b18.js": "/MemoryCardGame-ReactJs/precache-manifest.d4b15a17cd13039482fd907e14423b18.js",
+    "precache-manifest.da54c3582b199ae15d4142d0c9f1f88d.js": "/MemoryCardGame-ReactJs/precache-manifest.da54c3582b199ae15d4142d0c9f1f88d.js",
     "service-worker.js": "/MemoryCardGame-ReactJs/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/MemoryCardGame-ReactJs/static/css/2.17e5ed98.chunk.css.map",
     "static/css/main.951b7187.chunk.css.map": "/MemoryCardGame-ReactJs/static/css/main.951b7187.chunk.css.map"
@@ -19,6 +19,6 @@
     "static/css/2.17e5ed98.chunk.css",
     "static/js/2.be2c1681.chunk.js",
     "static/css/main.951b7187.chunk.css",
-    "static/js/main.7362e979.chunk.js"
+    "static/js/main.fa1de1a3.chunk.js"
   ]
 }
