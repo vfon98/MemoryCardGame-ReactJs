@@ -2,7 +2,7 @@ import React from "react";
 import MenuTime from "../components/MenuTime";
 import MenuInfo from "../components/MenuInfo";
 
-class GameMenu extends React.Component {
+class GameMenu extends React.PureComponent {
   render() {
     let { click, remain, time } = this.props;
     return (

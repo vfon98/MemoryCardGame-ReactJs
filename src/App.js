@@ -5,7 +5,7 @@ import GameBoard from "./containers/GameBoard";
 import GameMenu from "./containers/GameMenu";
 import GameOver from "./components/GameOver";
 
-class App extends React.Component {
+class App extends React.PureComponent {
   state = {
     boardSize: 5,
     time: 0,

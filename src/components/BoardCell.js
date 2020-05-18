@@ -11,7 +11,7 @@ import React from "react";
 //     );
 // }
 
-class BoardCell extends React.Component {
+class BoardCell extends React.PureComponent {
   render() {
     let { logoPath, logoID, isHidden, cellIndex } = this.props;
     const hiddenLogoPath = "./logo/question-block.svg";

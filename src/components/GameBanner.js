@@ -8,4 +8,4 @@ const GameBanner = () => {
     );
 }
 
-export default GameBanner;
+export default React.memo(GameBanner);

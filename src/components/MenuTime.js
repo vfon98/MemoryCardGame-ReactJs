@@ -8,4 +8,4 @@ const MenuTime = ({ time }) => {
   );
 };
 
-export default MenuTime;
+export default React.memo(MenuTime);

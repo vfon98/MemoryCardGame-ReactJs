@@ -2,7 +2,7 @@ import React from "react";
 import BoardCell from "../components/BoardCell";
 import logosArray from "../logosArray";
 
-class GameBoard extends React.Component {
+class GameBoard extends React.PureComponent {
   constructor(props) {
     super(props);
     const neededImages = ~~(props.boardSize ** 2 / 2);

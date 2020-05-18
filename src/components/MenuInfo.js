@@ -33,4 +33,4 @@ const MenuInfo = ({ level, boardSize, score, click, remain }) => {
   );
 };
 
-export default MenuInfo;
+export default React.memo(MenuInfo);
